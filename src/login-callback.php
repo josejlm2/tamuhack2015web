@@ -22,9 +22,9 @@ try {
 
 if (isset($accessToken)) {
   // Logged in!
-  $_SESSION['facebook_access_token'] = (string) $accessToken;
-  //header( 'Location: http://localhost:8888/src/profile.php' ) ;
-  header( 'Location: http://goodtimes2.azurewebsites.net/src/profile.php' ) ;
+  $_SESSION['fb_token'] = (string) $accessToken;
+  echo "LOG IN";
+  header( 'Location: http://localhost:8888/src/profile.php' ) ;
   // Now you can redirect to another page and use the
   // access token from $_SESSION['facebook_access_token']
 }
