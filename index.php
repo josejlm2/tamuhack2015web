@@ -1,15 +1,3 @@
-<?php
-// Server in the this format: <computer>\<instance name> or 
-// <server>,<port> when using a non default port number
-$server = 'tcp:ozfevv4o6f.database.windows.net,1433';
-
-// Connect to MSSQL
-$link = mssql_connect($server, 'josejlm2', 'TamuHack2015');
-
-if (!$link) {
-    die('Something went wrong while connecting to MSSQL');
-}
-?>
 
 
 
