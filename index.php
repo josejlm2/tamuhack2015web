@@ -1,3 +1,19 @@
+<?php
+// Server in the this format: <computer>\<instance name> or 
+// <server>,<port> when using a non default port number
+$server = 'tcp:ozfevv4o6f.database.windows.net,1433';
+
+// Connect to MSSQL
+$link = mssql_connect($server, 'josejlm2', 'TamuHack2015');
+
+if (!$link) {
+    die('Something went wrong while connecting to MSSQL');
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -14,48 +30,23 @@
 		<![endif]-->
 		<link href="css/styles.css" rel="stylesheet">
 		<link href="css/animate.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/animate.css">
 		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-		<link href='https://raw.githubusercontent.com/daneden/animate.css/master/animate.css' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 
 <header class="navbar navbar-default navbar-static-top" id="nav-bar" role="banner">
   <div class="container">
 		<a href="/" id="brand" class="navbar-brand">GoodTimes</a>
-    <!-- <div class="navbar-header">
-      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="/" class="navbar-brand">GoodTimes</a>
-    </div>
-    <nav class="collapse navbar-collapse" role="navigation">
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="#">Get Started</a>
-        </li>
-        <li>
-          <a href="#">Edit</a>
-        </li>
-        <li>
-          <a href="#">Visualize</a>
-        </li>
-        <li>
-          <a href="#">Prototype</a>
-        </li>
-      </ul>
-    </nav> -->
   </div>
 </header>
 
 <!-- Begin Body -->
 <div class="container">
 	<div class="row">
-  			<div class="col-md-2" id="leftCol">
+  			<div class="col-md-2" id="leftCol" >
               	
-				<div class="well"> 
+				<div class="well wow slideInDown" > 
               	<ul class="nav nav-stacked" id="sidebar">
                   <li id="profile"><a href="#sec1"><i class="fa fa-user"></i>   Profile</a></li>
                   <li id="myevents"><a href="#sec2"><i class="fa fa-calendar"></i>   My Events</a></li>
@@ -162,84 +153,11 @@
       		</div> 
   	</div>
 </div>
-
-
-
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/scripts.js"></script>
-		
-		<script>
-		
-
-			
-			$( '#brand' ).hover(
-			  function() {
-				$( this ).addClass( 'animated pulse' );
-			  }, function() {
-				$( this ).removeClass( 'animated pulse' );
-			  }
-			);
-			
-			$( '#profile' ).hover(
-			  function() {
-				$( this ).addClass( 'animated rubberBand' );
-			  }, function() {
-				$( this ).removeClass( 'animated rubberBand' );
-			  }
-			);
-			
-			$( '#myevents' ).hover(
-			  function() {
-				$( this ).addClass( 'animated rubberBand' );
-			  }, function() {
-				$( this ).removeClass( 'animated rubberBand' );
-			  }
-			);
-			
-			$( '#invites' ).hover(
-			  function() {
-				$( this ).addClass( 'animated rubberBand' );
-			  }, function() {
-				$( this ).removeClass( 'animated rubberBand' );
-			  }
-			);
-			
-			$( '#friends' ).hover(
-			  function() {
-				$( this ).addClass( 'animated rubberBand' );
-			  }, function() {
-				$( this ).removeClass( 'animated rubberBand' );
-			  }
-			);
-			
-		</script>
+		<script src="js/wow.min.js"></script>
+		<script src="js/animate.js"></script>
 	</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
