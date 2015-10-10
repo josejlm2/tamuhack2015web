@@ -98,5 +98,6 @@
 <div id="status">
 </div>
 
+<input type='button' value = 'logout' onclick="logout();">
 </body>
 </html>
