@@ -80,18 +80,13 @@
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
+      // document.getElementById('status').innerHTML =
+      //   'Thanks for logging in, ' + response.name + '!';
+
+      document.location = '/profile.php';
     });
   }
 
-  function logout(){
-    FB.logout(function(response) {
-      console.log('Successful logout for: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Bye Bye, ' + response.name + '!';
-    });
-  }
 function fbLogoutUser() {
     FB.getLoginStatus(function(response) {
         if (response && response.status === 'connected') {
