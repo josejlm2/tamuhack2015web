@@ -87,7 +87,9 @@
 
   function logout(){
     FB.logout(function(response) {
-      // user is now logged out
+      console.log('Successful logout for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Bye Bye, ' + response.name + '!';
     });
   }
 </script>
