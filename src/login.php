@@ -92,6 +92,19 @@
         'Bye Bye, ' + response.name + '!';
     });
   }
+    function facebookLogout(){
+        FB.getLoginStatus(function(response) {
+            if (response.status === 'connected') {
+                FB.logout(function(response) {
+                    // this part just clears the $_SESSION var
+                    // replace with your own code
+                    $.post("/logout").done(function() {
+                        $('#status').html('<p>Logged out.</p>');
+                    });
+                });
+            }
+        });
+    }  
 </script>
 
 <!--
@@ -106,6 +119,6 @@
 <div id="status">
 </div>
 
-<input type='button' value = 'logout' onclick="logout();">
+<input type='button' value = 'logout' onclick="facebookLogout();">
 </body>
 </html>
