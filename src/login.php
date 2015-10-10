@@ -92,19 +92,15 @@
         'Bye Bye, ' + response.name + '!';
     });
   }
-    function facebookLogout(){
-        FB.getLoginStatus(function(response) {
-            if (response.status === 'connected') {
-                FB.logout(function(response) {
-                    // this part just clears the $_SESSION var
-                    // replace with your own code
-                    $.post("/logout").done(function() {
-                        $('#status').html('<p>Logged out.</p>');
-                    });
-                });
-            }
-        });
-    }  
+function fbLogoutUser() {
+    FB.getLoginStatus(function(response) {
+        if (response && response.status === 'connected') {
+            FB.logout(function(response) {
+                document.location.reload();
+            });
+        }
+    });
+} 
 </script>
 
 <!--
@@ -119,6 +115,6 @@
 <div id="status">
 </div>
 
-<input type='button' value = 'logout' onclick="facebookLogout();">
+<input type='button' value = 'logout' onclick="fbLogoutUser();">
 </body>
 </html>
