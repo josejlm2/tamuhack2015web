@@ -104,7 +104,7 @@ function fbLogoutUser() {
   the FB.login() function when clicked.
 -->
 
-<input type='button' value ='login' scope="public_profile,email" onlogin="checkLoginState();">
+<input type='button' value ='login' scope="public_profile,email" onclick="checkLoginState();">
 
 <div id="status">
 </div>
