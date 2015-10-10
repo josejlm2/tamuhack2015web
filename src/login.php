@@ -110,6 +110,7 @@ function fbLogoutUser() {
 <div id="status">
 </div>
 
-<input type='button' value = 'logout' onclick="fbLogoutUser();">
+<fb:logout-button type='button' value = 'logout' onclick="fbLogoutUser();">
+</fb:login-button>
 </body>
 </html>
