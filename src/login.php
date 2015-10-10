@@ -83,7 +83,7 @@
       // document.getElementById('status').innerHTML =
       //   'Thanks for logging in, ' + response.name + '!';
 
-      document.location = '/profile.php';
+      document.location = '/src/profile.php';
     });
   }
 
