@@ -4,7 +4,7 @@
 <html lang="en">
 	<head>
 		<?php include 'pages/head.php';?>
-		<title>GoodTimes</title>
+		<title>My Events</title>
 	</head>
 	<body>
 	
@@ -20,7 +20,7 @@
 			
       		<div class="col-md-10">
 			
-				<?php include 'pages/sampleContent.php';?>
+				<?php include 'pages/myEventsContent.php';?>
               	                            
               	<hr>             
               	<hr>
