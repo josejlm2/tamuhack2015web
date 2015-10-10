@@ -1,29 +1,13 @@
 <?php
-<<<<<<< HEAD
-// Server in the this format: <computer>\<instance name> or 
-// <server>,<port> when using a non default port number
-$server = 'tcp:ozfevv4o6f.database.windows.net,1433';
-
-// Connect to MSSQL
-$link = mssql_connect($server, 'josejlm2', 'TamuHack2015');
-
-if (!$link) {
-    die('Something went wrong while connecting to MSSQL');
-}
-=======
 $connectionInfo = array("UID" => "josejlm2@ozfevv4o6f", "pwd" => "TamuHack2015", "Database" => "tamuhack2015_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:ozfevv4o6f.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
->>>>>>> master
 ?>
 
 
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> master
 <!DOCTYPE html>
 <html lang="en">
 	<head>
