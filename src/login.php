@@ -11,7 +11,9 @@ $fb = new Facebook\Facebook([
 session_start();
 $helper = $fb->getRedirectLoginHelper();
 $permissions = ['email', 'user_likes']; // optional
-$loginUrl = $helper->getLoginUrl('http://localhost:8888/src/login-callback.php', $permissions);
+//$loginUrl = $helper->getLoginUrl('http://localhost:8888/src/login-callback.php', $permissions);
+$loginUrl = $helper->getLoginUrl('http://goodtimes2.azurewebsites.net/src/login-callback.php', $permissions);
+
 
 echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
 
